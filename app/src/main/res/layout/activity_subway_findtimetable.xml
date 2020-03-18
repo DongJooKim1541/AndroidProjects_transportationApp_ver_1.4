@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="지하철역 시간표 목록조회"
+            android:textSize="30dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/dailyTypeCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="평일, 토요일, 일요일"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:imeOptions="actionSearch"/>
+            <EditText
+                android:id="@+id/upDownTypeCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="상행, 하행"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:imeOptions="actionSearch"/>
+
+            <Button
+                android:id="@+id/searchTimeTableBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="검색"/>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/mySubwayListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</LinearLayout>
